@@ -1,0 +1,70 @@
+name: brew test-bot
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions: {}
+
+jobs:
+  test-bot-macos:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15-intel, macos-26]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache Homebrew Bundler RubyGems
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.os }}-rubygems-
+
+      - run: brew test-bot --only-cleanup-before
+      - run: brew test-bot --only-setup
+      - run: brew test-bot --only-tap-syntax
+      - run: brew test-bot --only-formulae
+        if: github.event_name == 'pull_request'
+
+  test-bot-linux:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/brew:main
+      options: --privileged
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache Homebrew Bundler RubyGems
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: linux-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: linux-rubygems-
+
+      - run: brew test-bot --only-cleanup-before
+      - run: brew test-bot --only-setup
+      - run: brew test-bot --only-tap-syntax
+      - run: brew test-bot --only-formulae
+        if: github.event_name == 'pull_request'
