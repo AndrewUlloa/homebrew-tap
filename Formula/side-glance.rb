@@ -9,26 +9,26 @@ class SideGlance < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.3/side-glance-v0.1.0-beta.3-darwin-arm64.tar.gz"
-      sha256 "b655d0e2c8047aa4a280d4b88efa6ee9d58c3659910b95dc94e98efa7a19a4ee"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.4/side-glance-v0.1.0-beta.4-darwin-arm64.tar.gz"
+      sha256 "6722c113a01a20d42b2853e2768799057b40138f6d3422fed9bc6118eafe0e40"
     end
 
     on_intel do
       # Node SEA does not regularly test Intel macOS; this beta artifact is experimental.
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.3/side-glance-v0.1.0-beta.3-darwin-x64.experimental.tar.gz"
-      sha256 "7a8a163d3990def6377d3e4f2fecad663f93981869a84bfed77bbf5c0fb04f21"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.4/side-glance-v0.1.0-beta.4-darwin-x64.experimental.tar.gz"
+      sha256 "527dcb474278d0ebf750c029077985b0dfad5227a45dd3ff30065dbea759a061"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.3/side-glance-v0.1.0-beta.3-linux-arm64-gnu.tar.gz"
-      sha256 "76784e99b06bb3a0ba3cb0a18a847799823a1f2a274127f39e83b9362ebcaf9f"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.4/side-glance-v0.1.0-beta.4-linux-arm64-gnu.tar.gz"
+      sha256 "2d77c3214e08dd95f852d4524551329722a035eacf7e205c27b76eab23d090a0"
     end
 
     on_intel do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.3/side-glance-v0.1.0-beta.3-linux-x64-gnu.tar.gz"
-      sha256 "6ca1be73ff81a3caabbc47b96fb09461291d4d0ab0780a1a8482d7dd333fe4da"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.4/side-glance-v0.1.0-beta.4-linux-x64-gnu.tar.gz"
+      sha256 "26686fe8e8c343f830e68da88e286f04ec2fa9dd1d3f86f1679eae9ba890de3b"
     end
   end
 

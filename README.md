@@ -5,7 +5,7 @@ a local-first attention layer for coding-agent CLIs.
 
 ```bash
 brew install AndrewUlloa/tap/side-glance
-side-glance doctor --json
+side-glance init
 ```
 
 Side Glance is currently a beta. The formula installs immutable, checksummed
