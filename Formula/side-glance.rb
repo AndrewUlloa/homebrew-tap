@@ -5,7 +5,6 @@
 class SideGlance < Formula
   desc "Local-first attention cues for coding-agent terminal sessions"
   homepage "https://github.com/AndrewUlloa/side-glance"
-  version "0.1.0-beta.3"
   license "Apache-2.0"
 
   on_macos do
