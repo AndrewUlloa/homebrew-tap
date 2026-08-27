@@ -9,26 +9,26 @@ class SideGlance < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.11/side-glance-v0.1.0-beta.11-darwin-arm64.tar.gz"
-      sha256 "9a2697a190aa093232d7c4d016ba5cd91d55de5bbb118fa786892f4db0874f40"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-darwin-arm64.tar.gz"
+      sha256 "726ae029570b6a2b4d30e2ccbdba872051159beaf5d42d8d4b63afab4eb5ddee"
     end
 
     on_intel do
       # Node SEA does not regularly test Intel macOS; this beta artifact is experimental.
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.11/side-glance-v0.1.0-beta.11-darwin-x64.experimental.tar.gz"
-      sha256 "964675b12212524d2fd13e517488d7a6a93bc30900f24274373621d6eb135d54"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-darwin-x64.experimental.tar.gz"
+      sha256 "34c0fb552df8903cc75c72448effc01f10315f9131515e0d4a9c0b52a4a72193"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.11/side-glance-v0.1.0-beta.11-linux-arm64-gnu.tar.gz"
-      sha256 "449f4e694e0f913e7ca625204ddcf5126690f4ca46ea3db5b0157a3ba4709b18"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-linux-arm64-gnu.tar.gz"
+      sha256 "02979b709f5a4df74d3deb0aced66c12c83eee19a27bcba9c9c8cb54e847b165"
     end
 
     on_intel do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.11/side-glance-v0.1.0-beta.11-linux-x64-gnu.tar.gz"
-      sha256 "2419a63f46c7e67d3d4ced765dce94b5fbd1fdc9a3b3cb2a4878d71765947160"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-linux-x64-gnu.tar.gz"
+      sha256 "8e2442904fd596214ba49071f4304058652b4d2a539c6e6bcbd8ff60ee14ee36"
     end
   end
 
