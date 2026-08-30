@@ -9,26 +9,26 @@ class SideGlance < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-darwin-arm64.tar.gz"
-      sha256 "726ae029570b6a2b4d30e2ccbdba872051159beaf5d42d8d4b63afab4eb5ddee"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0/side-glance-v0.1.0-darwin-arm64.tar.gz"
+      sha256 "b84213702be8fd2d86f57a4c040f7e9e3d68fc712064575f65976b40e6310e4c"
     end
 
     on_intel do
-      # Node SEA does not regularly test Intel macOS; this beta artifact is experimental.
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-darwin-x64.experimental.tar.gz"
-      sha256 "34c0fb552df8903cc75c72448effc01f10315f9131515e0d4a9c0b52a4a72193"
+      # Node SEA does not regularly test Intel macOS; this artifact is experimental.
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0/side-glance-v0.1.0-darwin-x64.experimental.tar.gz"
+      sha256 "580f2a363fd8d41562fd7f841d98ac4e6bbc51e38c6230b66c3f472758fec5a9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-linux-arm64-gnu.tar.gz"
-      sha256 "02979b709f5a4df74d3deb0aced66c12c83eee19a27bcba9c9c8cb54e847b165"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0/side-glance-v0.1.0-linux-arm64-gnu.tar.gz"
+      sha256 "9b3a8156af42984231109dcd5d05b40037494618bdefac27bf7f6f2a4a556726"
     end
 
     on_intel do
-      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0-beta.12/side-glance-v0.1.0-beta.12-linux-x64-gnu.tar.gz"
-      sha256 "8e2442904fd596214ba49071f4304058652b4d2a539c6e6bcbd8ff60ee14ee36"
+      url "https://github.com/AndrewUlloa/side-glance/releases/download/v0.1.0/side-glance-v0.1.0-linux-x64-gnu.tar.gz"
+      sha256 "f8ac27c75f55e5ce10b623d2ada6670329a7381999d4511fa7bc913d1fb229c1"
     end
   end
 
